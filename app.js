@@ -15,12 +15,12 @@ app.get("/",function(req,res){
     var options={
         weekday:"long",
         day:"numeric",
-        mont:"long"
+        month:"long"
     };
     var day=today.toLocaleDateString("en-US",options);
 
     res.render("list",{kindOfDay: day,newListItems: items});
-    
+
 });
 
 app.post("/",function(req,res){
